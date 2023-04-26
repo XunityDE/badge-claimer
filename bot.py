@@ -17,7 +17,7 @@ async def claim(interaction: Interaction):
     await interaction.response.send_message('Du kannst dein Badge auf https://discord.com/developers/active-developer in wenigen Tagen beanspruchen!')
 
 @bot.slash_command(description='Bentuze diesen Command, um alle Server zu verlassen')
-async def leave_all_servers():
+async def leave_all_servers(self):
         # Verlasse alle Server
         for guild in bot.guilds:
             await guild.leave()
