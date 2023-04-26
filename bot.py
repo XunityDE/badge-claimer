@@ -12,11 +12,11 @@ from nextcord.ext import commands
 bot = commands.Bot()
 
 # Erstelle ein Slashcommand
-@bot.slash_command(description='Bentuze diesen Command, um es zu claimen')
+@bot.slash_command(description='Bentuze diesen Command, um es zu claimen', default_member_permissions=8)
 async def claim(interaction: Interaction):
     await interaction.response.send_message('Du kannst dein Badge auf https://discord.com/developers/active-developer in wenigen Tagen beanspruchen!')
 
-@bot.slash_command(description='Bentuze diesen Command, um alle Server zu verlassen')
+@bot.slash_command(description='Bentuze diesen Command, um alle Server zu verlassen', default_member_permissions=8)
 async def leave_all_servers(self):
         # Verlasse alle Server
         for guild in bot.guilds:
